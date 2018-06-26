@@ -1,0 +1,32 @@
+{
+  "name": "mwp-application-launcher",
+  "version": "1.0.0",
+  "description": "MyWebPortal Application Launcher",
+  "main": "dist/mwp-application-launcher.js",
+  "umd:main": "dist/mwp-application-launcher.umd.js",
+  "module": "dist/mwp-application-launcher.m.js",
+  "source": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "preact": "^8.2.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.2.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.2.0",
+    "microbundle": "^0.4.4"
+  }
+}
