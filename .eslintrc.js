@@ -16,5 +16,6 @@ module.exports = {
         varsIgnorePattern: '^h$',
       },
     ],
+    'import/prefer-default-export': 'off',
   },
 };
