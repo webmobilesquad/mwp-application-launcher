@@ -1,9 +1,7 @@
 import { render } from 'preact';
 import { ApplicationLauncher } from './ApplicationLauncher';
 
-export function initApplicationLauncher({ element, ...props }) {
-  render(
-    <ApplicationLauncher {...props} />,
-    element,
-  );
-}
+export const renderLauncher = ({ container, ...props }) => render(
+  <ApplicationLauncher {...props} />,
+  container,
+);
