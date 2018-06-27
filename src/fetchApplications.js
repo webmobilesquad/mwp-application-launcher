@@ -1,4 +1,4 @@
-export function fetchApplications(domain) {
+export async function fetchApplications(domain) {
   // TODO
   // fetch applications from server api
 
@@ -7,27 +7,16 @@ export function fetchApplications(domain) {
 
   return [
     {
+      id: 1,
       name: 'MyInspection',
-      href: 'my-inspection',
+      href: 'https://mywebportal.michelin-solutions.com/my-inspection',
       img: '',
     },
     {
+      id: 2,
       name: 'MyTraining',
-      href: 'my-training',
+      href: 'https://mywebportal.michelin-solutions.com/my-training',
       img: '',
     },
   ];
-
-  // return Promise.resolve([
-  //   {
-  //     name: 'MyInspection',
-  //     href: 'my-inspection',
-  //     img: '',
-  //   },
-  //   {
-  //     name: 'MyTraining',
-  //     href: 'my-training',
-  //     img: '',
-  //   },
-  // ]);
 }

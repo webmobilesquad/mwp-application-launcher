@@ -11,9 +11,9 @@ export class ApplicationLauncher extends Component {
     this.initApplications();
   }
 
-  initApplications() {
+  async initApplications() {
     const { url } = this.props;
-    const applications = fetchApplications(url);
+    const applications = await fetchApplications(url);
     this.setState({ applications });
   }
 
