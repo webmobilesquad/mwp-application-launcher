@@ -22,7 +22,7 @@ export class ApplicationLauncher extends Component {
   render({ className, ...props }, { applications }) {
     return (
       <div className={cx(style.ApplicationLauncher, className)} {...props}>
-        {applications && applications.map(application => <Application {...application} />)}
+        {applications && applications.map(application => <Application application={application} />)}
       </div>
     );
   }

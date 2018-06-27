@@ -6,11 +6,12 @@ export class Application extends Component {
     active: false,
   }
 
-  render({ name, href, img }) {
+  render({ application }) {
+    const { name, url, icon } = application;
     return (
       <div className={style.Application}>
-        <a href={href}>
-          <img src={img} alt={name} />
+        <a href={url}>
+          <img src={icon} alt={name} />
           <span>{name}</span>
         </a>
       </div>
