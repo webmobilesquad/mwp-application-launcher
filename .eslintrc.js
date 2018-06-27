@@ -1,6 +1,7 @@
 module.exports = {
   extends: ['airbnb', 'plugin:jest/recommended'],
   plugins: ['jest'],
+  parser: 'babel-eslint',
   env: {
     browser: true,
   },
