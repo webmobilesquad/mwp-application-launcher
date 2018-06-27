@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 import { fetchApplications } from '../fetchApplications';
 import { Application } from '../Application';
 

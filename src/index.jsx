@@ -1,4 +1,4 @@
-import { h, render } from 'preact';
+import { render } from 'preact';
 import { ApplicationLauncher } from './ApplicationLauncher';
 
 export function initApplicationLauncher({ element, url, props }) {
