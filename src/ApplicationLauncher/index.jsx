@@ -3,11 +3,8 @@ import { fetchApplications } from '../fetchApplications';
 import { Application } from '../Application';
 
 export class ApplicationLauncher extends Component {
-  constructor() {
-    super();
-    this.state = {
-      applications: undefined,
-    };
+  state = {
+    applications: undefined,
   }
 
   componentDidMount() {
