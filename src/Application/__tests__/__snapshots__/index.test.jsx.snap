@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Application /> <Application /> matches snapshot 1`] = `
+preact-render-spy (1 nodes)
+-------
+<div class="Application">
+  <a>
+    <img />
+    <span></span>
+  </a>
+</div>
+
+`;
