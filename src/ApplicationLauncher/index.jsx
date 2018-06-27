@@ -1,6 +1,8 @@
 import { Component } from 'preact';
+import cx from 'classnames';
 import { fetchApplications } from '../fetchApplications';
 import { Application } from '../Application';
+import style from './style.module.scss';
 
 export class ApplicationLauncher extends Component {
   state = {
@@ -17,10 +19,9 @@ export class ApplicationLauncher extends Component {
     this.setState({ applications });
   }
 
-  render(props, { applications }) {
+  render({ className, ...props }, { applications }) {
     return (
-      <div>
-        <span>Hello JSX!</span>
+      <div className={cx(style.ApplicationLauncher, className)} {...props}>
         {applications && applications.map(application => <Application {...application} />)}
       </div>
     );
