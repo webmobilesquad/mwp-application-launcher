@@ -1,9 +1,9 @@
 import { render } from 'preact';
 import { ApplicationLauncher } from './ApplicationLauncher';
 
-export function initApplicationLauncher({ element, url, props }) {
+export function initApplicationLauncher({ element, ...props }) {
   render(
-    <ApplicationLauncher url={url} {...props} />,
+    <ApplicationLauncher {...props} />,
     element,
   );
 }
