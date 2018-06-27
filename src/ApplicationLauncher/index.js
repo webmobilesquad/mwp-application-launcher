@@ -1,14 +1,31 @@
-import { h } from 'preact';
+import { h, Component } from 'preact';
 import { fetchApplications } from '../fetchApplications';
 import { Application } from '../Application';
 
-export function ApplicationLauncher({ url }) {
-  const applications = fetchApplications(url);
+export class ApplicationLauncher extends Component {
+  constructor() {
+    super();
+    this.state = {
+      applications: undefined,
+    };
+  }
 
-  return (
-    <div>
-      <span>Hello JSX!</span>
-      {applications.map(application => <Application {...application} />)}
-    </div>
-  );
+  componentDidMount() {
+    this.initApplications();
+  }
+
+  initApplications() {
+    const { url } = this.props;
+    const applications = fetchApplications(url);
+    this.setState({ applications });
+  }
+
+  render(props, { applications }) {
+    return (
+      <div>
+        <span>Hello JSX!</span>
+        {applications && applications.map(application => <Application {...application} />)}
+      </div>
+    );
+  }
 }

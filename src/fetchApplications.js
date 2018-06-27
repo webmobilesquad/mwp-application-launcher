@@ -17,4 +17,17 @@ export function fetchApplications(domain) {
       img: '',
     },
   ];
+
+  // return Promise.resolve([
+  //   {
+  //     name: 'MyInspection',
+  //     href: 'my-inspection',
+  //     img: '',
+  //   },
+  //   {
+  //     name: 'MyTraining',
+  //     href: 'my-training',
+  //     img: '',
+  //   },
+  // ]);
 }
