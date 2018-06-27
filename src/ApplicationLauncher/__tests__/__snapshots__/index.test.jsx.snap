@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ApplicationLauncher /> <ApplicationLauncher /> matches snapshot 1`] = `
+preact-render-spy (1 nodes)
+-------
+<div>
+  <span>Hello JSX!</span>
+</div>
+
+`;
