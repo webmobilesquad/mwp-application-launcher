@@ -5,7 +5,7 @@ export async function fetchApplications(domain) {
   const url = `${domain}/msn/api/applications`;
   console.log('url: ', url);
 
-  return [
+  return Promise.resolve([
     {
       id: 1,
       name: 'MyInspection',
@@ -18,5 +18,5 @@ export async function fetchApplications(domain) {
       href: 'https://mywebportal.michelin-solutions.com/my-training',
       img: '',
     },
-  ];
+  ]);
 }
