@@ -7,7 +7,9 @@ export const renderLauncher = ({ container, ...props }) => render(
   container,
 );
 
-export const renderLauncherButton = ({ container, ...props }) => render(
-  <ApplicationLauncherButton {...props} />,
-  container,
-);
+export const renderLauncherButton = ({ container, ...props }) => {
+  render(
+    <ApplicationLauncherButton {...props} />,
+    container,
+  );
+};

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ApplicationLauncherModal /> <ApplicationLauncherModal /> matches snapshot 1`] = `
+preact-render-spy (1 nodes)
+-------
+<aside class="ApplicationLauncherModal">
+  <div class="ApplicationLauncherModal_Content">
+    I am a modal that should contain applications
+  </div>
+</aside>
+
+`;

@@ -1,0 +1,20 @@
+.ApplicationLauncherModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(33, 33, 33, 0.6);
+
+  // Hidden by default
+  visibility: hidden;
+
+  &_Content {
+    background: lightblue;
+  }
+
+  &__Visible {
+    visibility: visible;
+  }
+}
