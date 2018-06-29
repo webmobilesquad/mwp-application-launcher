@@ -4,9 +4,7 @@ exports[`<ApplicationLauncherModal /> <ApplicationLauncherModal /> matches snaps
 preact-render-spy (1 nodes)
 -------
 <aside class="ApplicationLauncherModal">
-  <div class="ApplicationLauncherModal_Content">
-    I am a modal that should contain applications
-  </div>
+  <div class="ApplicationContainer"></div>
 </aside>
 
 `;
