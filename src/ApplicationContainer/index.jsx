@@ -1,26 +1,18 @@
 import { Component } from 'preact';
+import { connect } from 'unistore/preact';
 import cx from 'classnames';
-import { fetchApplications } from '../fetchApplications';
 import { Application } from '../Application';
+import { actions } from '../actions';
 
 import style from './style.module.scss';
 
-export class ApplicationContainer extends Component {
-  state = {
-    applications: undefined,
+class ApplicationList extends Component {
+  async componentDidMount() {
+    const { getApplications } = this.props;
+    getApplications();
   }
 
-  componentDidMount() {
-    this.initApplications();
-  }
-
-  async initApplications() {
-    const { url } = this.props;
-    const applications = await fetchApplications(url);
-    this.setState({ applications });
-  }
-
-  render({ className, ...props }, { applications }) {
+  render({ className, applications, ...props }) {
     return (
       <div className={cx(style.ApplicationContainer, className)} {...props}>
         {applications && applications.map(application => <Application application={application} />)}
@@ -28,3 +20,7 @@ export class ApplicationContainer extends Component {
     );
   }
 }
+
+const wrapper = connect(state => ({ applications: state.applications.data }), actions);
+
+export const ApplicationContainer = wrapper(ApplicationList);

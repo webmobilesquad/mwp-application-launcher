@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "preact": "^8.2.9"
+    "preact": "^8.2.9",
+    "unistore": "^3.0.6"
   }
 }

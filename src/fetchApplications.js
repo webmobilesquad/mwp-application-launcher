@@ -3,7 +3,6 @@ export async function fetchApplications(domain) {
   // fetch applications from server api
 
   const url = `${domain}/msn/api/applications`;
-  console.log('url: ', url);
 
   return Promise.resolve([
     {
