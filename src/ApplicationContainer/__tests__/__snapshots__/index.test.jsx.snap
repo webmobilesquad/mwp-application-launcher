@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ApplicationContainer /> <ApplicationrContainer /> matches snapshot 1`] = `
+exports[`<ApplicationContainer /> <ApplicationContainer /> matches snapshot 1`] = `
 preact-render-spy (1 nodes)
 -------
-<div class="ApplicationContainer"></div>
+<i></i>
 
 `;

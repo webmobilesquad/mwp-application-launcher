@@ -4,7 +4,7 @@ exports[`<ApplicationLauncher /> <ApplicationLauncher /> matches snapshot 1`] = 
 preact-render-spy (1 nodes)
 -------
 <div class="ApplicationLauncher">
-  <div class="ApplicationContainer"></div>
+  <i></i>
 </div>
 
 `;
