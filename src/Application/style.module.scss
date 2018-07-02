@@ -4,4 +4,8 @@
   a, img {
     width: inherit;
   }
+
+  &__Active {
+    background: red;
+  }
 }
