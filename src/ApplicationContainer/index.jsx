@@ -12,7 +12,10 @@ class ApplicationList extends Component {
     getApplications();
   }
 
-  render({ className, applications, ...props }) {
+  render({ applications, grid, ...props }) {
+    const className = {
+      [style.ApplicationContainer__Grid]: grid,
+    };
     return (
       <div className={cx(style.ApplicationContainer, className)} {...props}>
         {applications && applications.map(application => <Application application={application} />)}

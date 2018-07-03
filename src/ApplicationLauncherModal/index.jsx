@@ -8,7 +8,7 @@ export function ApplicationLauncherModal({ visible, ...props }) {
   };
   return (
     <aside className={cx(style.ApplicationLauncherModal, className)} {...props}>
-      <ApplicationContainer {...props} />
+      <ApplicationContainer grid {...props} />
     </aside>
   );
 }
