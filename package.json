@@ -2,6 +2,14 @@
   "name": "mwp-application-launcher",
   "version": "1.0.0",
   "description": "MyWebPortal Application Launcher",
+  "homepage": "https://github.com/webmobilesquad/mwp-application-launcher#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webmobilesquad/mwp-application-launcher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webmobilesquad/mwp-application-launcher/issues"
+  },
   "main": "dist/mwp-application-launcher.cjs.js",
   "module": "dist/mwp-application-launcher.esm.js",
   "browser": "dist/mwp-application-launcher.umd.js",
