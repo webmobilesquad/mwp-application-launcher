@@ -24,9 +24,10 @@ export class Application extends Component {
     };
     return (
       <div className={cx(style.Application, className)}>
-        <a href={url}>
-          <img src={icon} alt={name} />
-          <span>{name}</span>
+        <a href={url} title={name}>
+          <div className={style.Application_Content}>
+            <img src={icon} alt={name} />
+          </div>
         </a>
       </div>
     );
