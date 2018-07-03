@@ -24,7 +24,7 @@ preact-render-spy (1 nodes)
     </svg>
   </button>
   <aside class="ApplicationLauncherModal">
-    <i></i>
+    <i grid={true}></i>
   </aside>
 </div>
 

@@ -4,7 +4,7 @@ exports[`<ApplicationLauncherModal /> <ApplicationLauncherModal /> matches snaps
 preact-render-spy (1 nodes)
 -------
 <aside class="ApplicationLauncherModal">
-  <i></i>
+  <i grid={true}></i>
 </aside>
 
 `;
