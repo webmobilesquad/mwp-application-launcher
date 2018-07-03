@@ -22,5 +22,6 @@ deploy:
   provider: npm
   email: "webmobile.squad@gmail.com"
   api_key: $AUTH_TOKEN
+  skip_cleanup: true
   on:
     tags: true
