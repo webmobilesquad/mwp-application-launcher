@@ -1,6 +1,10 @@
+$launcher-background-color: white;
+$launcher-shadow: 0 0 15px 0px rgba(33,33,33,.5);
+$launcher-width: 64px;
+
 .ApplicationLauncher {
-  background-color: white;
-  box-shadow: 0 0 15px 0px rgba(33,33,33,.5);
+  background-color: $launcher-background-color;
+  box-shadow: $launcher-shadow;
   height: 100%;
-  width: 64px;
+  width: $launcher-width;
 }
