@@ -1,8 +1,6 @@
-export async function fetchApplications(domain) {
+export async function fetchApplications(url) {
   // TODO
   // fetch applications from server api
-
-  const url = `${domain}/msn/api/applications`;
 
   return Promise.resolve([
     {

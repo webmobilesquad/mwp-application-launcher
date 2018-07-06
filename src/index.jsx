@@ -4,16 +4,28 @@ import { ApplicationLauncher } from './ApplicationLauncher';
 import { ApplicationLauncherButton } from './ApplicationLauncherButton';
 import { store } from './store';
 
-export const renderLauncher = ({ container, ...props }) => render(
+const renderLauncher = ({ container, ...props }) => render(
   <Provider store={store}>
     <ApplicationLauncher {...props} />
   </Provider>,
   container,
 );
 
-export const renderLauncherButton = ({ container, ...props }) => render(
+const renderLauncherButton = ({ container, ...props }) => render(
   <Provider store={store}>
     <ApplicationLauncherButton {...props} />
   </Provider>,
   container,
 );
+
+export function initLauncher({ url }) {
+  store.setState({
+    applications: {
+      url,
+    },
+  });
+  return {
+    renderLauncher,
+    renderLauncherButton,
+  };
+}

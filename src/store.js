@@ -4,5 +4,6 @@ export const store = createStore({
   applications: {
     data: null,
     loading: false,
+    url: null,
   },
 });

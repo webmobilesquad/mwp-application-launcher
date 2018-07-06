@@ -5,8 +5,8 @@ export const actions = store => ({
   // Setting "async getApplications" with "await fetchApplications",
   // it seems that we cannot interact with the store
   async getApplications({ applications }) {
-    // Do nothing if applications are already being loaded
-    if (applications.loading) { return; }
+    // Do nothing if url is not defined or applications are already being loaded
+    if (!applications.url || applications.loading) { return; }
     // Set the loading to true
     store.setState({
       applications: {
@@ -14,7 +14,7 @@ export const actions = store => ({
       },
     });
     // Async fetch applications
-    fetchApplications('toto').then((applicationsData) => {
+    fetchApplications(applications.url).then((applicationsData) => {
       // Once done, update the state
       store.setState({
         applications: {
