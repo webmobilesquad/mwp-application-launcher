@@ -45,9 +45,11 @@ preact-render-spy (1 nodes)
         </svg>
       </button>
     </div>
-    <div class="ApplicationLauncherModal_Content">
-      <i grid={true}></i>
-    </div>
+    <i
+      class="ApplicationLauncherModal_Content"
+      grid={true}
+    >
+    </i>
   </aside>
 </div>
 
