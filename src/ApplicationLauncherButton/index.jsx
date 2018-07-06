@@ -18,7 +18,7 @@ export class ApplicationLauncherButton extends Component {
 
   render(props, { modalVisible }) {
     return (
-      <div {...props}>
+      <div className={style.ApplicationLauncherButtonWrapper} {...props}>
         <button type="button" className={cx(style.ApplicationLauncherButton)} onClick={this.showModal}>
           {/* https://material.io/tools/icons/?search=apps&icon=apps&style=baseline */}
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

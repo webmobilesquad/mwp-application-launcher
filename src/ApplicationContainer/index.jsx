@@ -12,20 +12,15 @@ class ApplicationList extends Component {
     getApplications();
   }
 
-  render({
-    className, grid, applications, ...props
-  }) {
-    const classes = {
-      [style.ApplicationContainer__Grid]: grid,
-    };
+  render({ applications, className, ...props }) {
     return (
-      <div className={cx(style.ApplicationContainer, className, classes)} {...props}>
-        {applications && applications.map(application => <Application application={application} />)}
-      </div>
+      <ul className={cx(style.ApplicationList, className)} {...props}>
+        {applications && applications.map(application => <li><Application application={application} /></li>)}
+      </ul>
     );
   }
 }
 
-const wrapper = connect(state => ({ applications: state.applications.data }), actions);
-
-export const ApplicationContainer = wrapper(ApplicationList);
+export const ApplicationContainer = connect(
+  state => ({ applications: state.applications.data }), actions,
+)(ApplicationList);
