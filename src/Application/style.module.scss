@@ -1,6 +1,25 @@
+$application-primary-color: #cfd8dc;
+$application-primary-color-light: #ffffff;
+$application-accent-color: #00b0ff;
+$application-accent-color-light: #69e2ff;
+
+@mixin leftBar($color) {
+  &::before {
+    background-color: $color;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2px;
+  }
+}
+
 .Application {
   opacity: .8;
   padding: 5px;
+  position: relative;
 
   &_Content {
     img {
@@ -10,8 +29,10 @@
   }
 
   &:hover {
-    background-color: darkgrey;
+    background-color: $application-primary-color;
     opacity: 1;
+
+    @include leftBar($application-accent-color);
   }
 
   &:hover &_Content {
@@ -20,8 +41,10 @@
   }
 
   &__Active {
-    background: lightgrey;
+    background: $application-primary-color-light;
     opacity: .9;
+
+    @include leftBar($application-accent-color-light);
   }
 }
 
