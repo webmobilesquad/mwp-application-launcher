@@ -17,9 +17,7 @@ export function ApplicationLauncherModal({ visible, onClose, ...props }) {
           </svg>
         </button>
       </div>
-      <div className={style.ApplicationLauncherModal_Content}>
-        <ApplicationContainer grid />
-      </div>
+      <ApplicationContainer className={style.ApplicationLauncherModal_Content} grid />
     </aside>
   );
 }
