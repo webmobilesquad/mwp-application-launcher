@@ -6,12 +6,12 @@ export async function fetchApplications(url) {
     {
       name: 'Home',
       url: 'https://mywebportal.michelin-solutions.com/home',
-      icon: 'https://mywebportal.michelin-solutions.com/msn-applications/5da990a45725cd07b890f6b62a7bbb66.png',
+      icon: 'https://firebasestorage.googleapis.com/v0/b/newagent-24433.appspot.com/o/home_icon.png?alt=media&token=996d566b-2ab9-4349-afa5-9ac31a2994e3',
     },
     {
       name: 'Administration',
       url: 'https://mywebportal.michelin-solutions.com/admin',
-      icon: 'https://mywebportal.michelin-solutions.com/msn-applications/5da990a45725cd07b890f6b62a7bbb66.png',
+      icon: 'https://firebasestorage.googleapis.com/v0/b/newagent-24433.appspot.com/o/administration_icon.png?alt=media&token=f05d9acd-eccd-4a88-b015-db3cb9a9f382',
     },
     {
       name: 'MyInspection',
