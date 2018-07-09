@@ -1,61 +1,10 @@
-$application-primary-color: #cfd8dc;
-$application-primary-color-light: #ffffff;
-$application-accent-color: #00b0ff;
-$application-accent-color-light: #69e2ff;
-
-@mixin leftBar($color) {
-  &::before {
-    background-color: $color;
-    bottom: 0;
-    content: "";
-    display: block;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 2px;
-  }
-}
-
 .Application {
-  opacity: .8;
-  padding: 5px;
-  position: relative;
-
-  &_Content {
-    img {
-      display: block;
-      width: 100%;
-    }
+  img {
+    display: block;
+    width: 100%;
   }
 
   &:hover {
-    background-color: $application-primary-color;
-    opacity: 1;
-
-    @include leftBar($application-accent-color);
-  }
-
-  &:hover &_Content {
-    animation: bounce .3s;
-    transform: scale(1.1);
-  }
-
-  &__Active {
-    background: $application-primary-color-light;
-    opacity: .9;
-
-    @include leftBar($application-accent-color-light);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1.1);
+    background: rgba(0, 0, 0, .04);
   }
 }

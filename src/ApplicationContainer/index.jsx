@@ -12,10 +12,12 @@ class ApplicationList extends Component {
     getApplications();
   }
 
-  render({ applications, className, ...props }) {
+  render({ applications, className, applicationClassName, applicationActiveClassName, ...props }) {
     return (
       <ul className={cx(style.ApplicationList, className)} {...props}>
-        {applications && applications.map(application => <li><Application application={application} /></li>)}
+        {applications && applications.map(
+          application => <Application application={application} className={applicationClassName} activeClassName={applicationActiveClassName} />,
+        )}
       </ul>
     );
   }

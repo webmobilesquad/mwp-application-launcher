@@ -1,10 +1,60 @@
 $launcher-background-color: white;
-$launcher-shadow: 0 0 15px 0px rgba(33,33,33,.5);
+$launcher-shadow: 0 7px 9px -4px rgba(0,0,0,.2), 0 14px 21px 2px rgba(0,0,0,.14), 0 5px 26px 4px rgba(0,0,0,.12);
 $launcher-width: 64px;
+
+$application-accent-color: #00b0ff;
+$application-accent-color-light: #69e2ff;
 
 .ApplicationLauncher {
   background-color: $launcher-background-color;
   box-shadow: $launcher-shadow;
   height: 100%;
   width: $launcher-width;
+}
+
+@mixin leftBar($color) {
+  &::before {
+    background-color: $color;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2px;
+  }
+}
+
+.Application {
+  opacity: .8;
+  padding: 5px;
+  position: relative;
+
+  &:hover {
+    opacity: 1;
+    @include leftBar($application-accent-color);
+  }
+
+  &:hover img {
+    animation: bounce .3s;
+    transform: scale(1.1);
+  }
+
+  &__Active {
+    background: rgba(0, 0, 0, .12);
+    opacity: 1;
+    @include leftBar($application-accent-color-light);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }

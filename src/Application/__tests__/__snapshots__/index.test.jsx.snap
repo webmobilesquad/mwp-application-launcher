@@ -3,18 +3,16 @@
 exports[`<Application /> <Application /> matches snapshot 1`] = `
 preact-render-spy (1 nodes)
 -------
-<div class="Application">
+<li class="Application">
   <a
     href="test/url"
     title="Test application"
   >
-    <div class="Application_Content">
-      <img
-        src="icon.png"
-        alt="Test application"
-       />
-    </div>
+    <img
+      src="icon.png"
+      alt="Test application"
+     />
   </a>
-</div>
+</li>
 
 `;

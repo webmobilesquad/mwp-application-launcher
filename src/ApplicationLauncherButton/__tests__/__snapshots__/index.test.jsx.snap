@@ -10,6 +10,7 @@ preact-render-spy (1 nodes)
     onClick={[Function anonymous]}
   >
     <svg
+      class="ApplicationLauncherButton_Icon"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -26,7 +27,8 @@ preact-render-spy (1 nodes)
   <aside class="ApplicationLauncherModal">
     <i
       class="ApplicationLauncherModal_Content"
-      grid={true}
+      applicationClassName="Application"
+      applicationActiveClassName="Application__Active"
     >
     </i>
   </aside>
