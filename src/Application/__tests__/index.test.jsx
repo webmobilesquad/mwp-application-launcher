@@ -8,6 +8,7 @@ describe('<Application />', () => {
       url: 'test/url',
       icon: 'icon.png',
     };
-    expect(render(<Application application={application} />)).toMatchSnapshot();
+    const currentUrl = '/current/url';
+    expect(render(<Application application={application} url={currentUrl} />)).toMatchSnapshot();
   });
 });

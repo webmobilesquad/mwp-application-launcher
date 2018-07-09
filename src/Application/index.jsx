@@ -1,11 +1,13 @@
 import cx from 'classnames';
 import style from './style.module.scss';
-import isApplicationActive from '../isApplicationActive';
+import { isUrlActiveForApplication } from '../isApplicationActive';
 
-export function Application({ application, className, activeClassName }) {
+export function Application({
+  application, className, activeClassName, url: currentUrl,
+}) {
   const { name, url, icon } = application;
   const classes = {
-    [activeClassName]: isApplicationActive(application),
+    [activeClassName]: isUrlActiveForApplication(currentUrl, application),
   };
   return (
     <li className={cx(style.Application, className, classes)}>

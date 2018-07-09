@@ -7,22 +7,42 @@ import { actions } from '../actions';
 import style from './style.module.scss';
 
 class ApplicationList extends Component {
-  async componentDidMount() {
+  state = {
+    url: window.location.href,
+  };
+
+  componentDidMount() {
     const { getApplications } = this.props;
     getApplications();
   }
 
-  render({ applications, className, applicationClassName, applicationActiveClassName, ...props }) {
+  onClick = () => {
+    this.setState({ url: window.location.href });
+  };
+
+  render(
+    {
+      applications, className, applicationClassName, applicationActiveClassName, ...props
+    },
+    { url },
+  ) {
     return (
-      <ul className={cx(style.ApplicationList, className)} {...props}>
-        {applications && applications.map(
-          application => <Application application={application} className={applicationClassName} activeClassName={applicationActiveClassName} />,
-        )}
+      <ul className={cx(style.ApplicationList, className)} onClick={this.onClick} {...props}>
+        {applications
+          && applications.map(application => (
+            <Application
+              application={application}
+              className={applicationClassName}
+              activeClassName={applicationActiveClassName}
+              url={url}
+            />
+          ))}
       </ul>
     );
   }
 }
 
 export const ApplicationContainer = connect(
-  state => ({ applications: state.applications.data }), actions,
+  state => ({ applications: state.applications.data }),
+  actions,
 )(ApplicationList);
