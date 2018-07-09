@@ -16,7 +16,7 @@ class ApplicationList extends Component {
     getApplications();
   }
 
-  onClick = () => {
+  handleUrlChange = () => {
     this.setState({ url: window.location.href });
   };
 
@@ -27,13 +27,14 @@ class ApplicationList extends Component {
     { url },
   ) {
     return (
-      <ul className={cx(style.ApplicationList, className)} onClick={this.onClick} {...props}>
+      <ul className={cx(style.ApplicationList, className)} {...props}>
         {applications
           && applications.map(application => (
             <Application
               application={application}
               className={applicationClassName}
               activeClassName={applicationActiveClassName}
+              onClick={this.handleUrlChange}
               url={url}
             />
           ))}
