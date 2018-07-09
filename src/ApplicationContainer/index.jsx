@@ -16,8 +16,9 @@ class ApplicationList extends Component {
     getApplications();
   }
 
-  handleUrlChange = () => {
-    this.setState({ url: window.location.href });
+  handleUrlChange = application => () => {
+    const { url: destinationUrl } = application;
+    this.setState({ url: destinationUrl });
   };
 
   render(
@@ -34,7 +35,7 @@ class ApplicationList extends Component {
               application={application}
               className={applicationClassName}
               activeClassName={applicationActiveClassName}
-              onClick={this.handleUrlChange}
+              onClick={this.handleUrlChange(application)}
               url={url}
             />
           ))}
