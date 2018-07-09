@@ -36,6 +36,7 @@ $application-accent-color-light: white;
   }
 
   &:hover {
+    background: rgba(255, 255, 255, .1);
     opacity: 1;
     @include leftBar($application-accent-color);
   }
