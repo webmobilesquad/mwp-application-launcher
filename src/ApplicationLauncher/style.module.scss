@@ -1,9 +1,9 @@
-$launcher-background-color: white;
+$launcher-background-color: #232323;
 $launcher-shadow: 0 7px 9px -4px rgba(0,0,0,.2), 0 14px 21px 2px rgba(0,0,0,.14), 0 5px 26px 4px rgba(0,0,0,.12);
 $launcher-width: 64px;
 
-$application-accent-color: #00b0ff;
-$application-accent-color-light: #69e2ff;
+$application-accent-color: white;
+$application-accent-color-light: white;
 
 .ApplicationLauncher {
   background-color: $launcher-background-color;
@@ -15,13 +15,14 @@ $application-accent-color-light: #69e2ff;
 @mixin leftBar($color) {
   &::before {
     background-color: $color;
-    bottom: 0;
+    bottom: 6px;
+    border-radius: 2px 0 0 2px;
     content: "";
     display: block;
-    left: 0;
     position: absolute;
-    top: 0;
-    width: 2px;
+    top: 6px;
+    right: 0;
+    width: 3px;
   }
 }
 
@@ -30,18 +31,22 @@ $application-accent-color-light: #69e2ff;
   padding: 5px;
   position: relative;
 
+  img {
+    transform: scale(.85);
+  }
+
   &:hover {
     opacity: 1;
     @include leftBar($application-accent-color);
   }
 
   &:hover img {
-    animation: bounce .3s;
-    transform: scale(1.1);
+    transition: transform 225ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    transform: scale(1);
   }
 
   &__Active {
-    background: rgba(0, 0, 0, .12);
+    background: rgba(255, 255, 255, .2);
     opacity: 1;
     @include leftBar($application-accent-color-light);
   }
