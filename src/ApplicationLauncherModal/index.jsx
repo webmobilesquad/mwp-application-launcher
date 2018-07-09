@@ -2,7 +2,7 @@ import cx from 'classnames';
 import style from './style.module.scss';
 import { ApplicationContainer } from '../ApplicationContainer';
 
-export function ApplicationLauncherModal({ visible, onClose, ...props }) {
+export function ApplicationLauncherModal({ visible, ...props }) {
   const classes = {
     [style.ApplicationLauncherModal__Visible]: visible,
   };
