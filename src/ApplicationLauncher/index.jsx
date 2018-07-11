@@ -1,9 +1,9 @@
-import { ApplicationContainer } from '../ApplicationContainer';
+import { ApplicationList } from '../ApplicationList';
 import style from './style.module.scss';
 
 export function ApplicationLauncher({ ...props }) {
   return (
-    <ApplicationContainer
+    <ApplicationList
       className={style.ApplicationLauncher}
       applicationClassName={style.Application}
       applicationActiveClassName={style.Application__Active}

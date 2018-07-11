@@ -6,13 +6,14 @@ import { actions } from '../actions';
 
 import style from './style.module.scss';
 
-class ApplicationList extends Component {
+class ApplicationListWithStore extends Component {
   state = {
     url: window.location.href,
   };
 
   componentDidMount() {
     const { getApplications } = this.props;
+    // setTimeout(getApplications, 2000);
     getApplications();
   }
 
@@ -44,7 +45,7 @@ class ApplicationList extends Component {
   }
 }
 
-export const ApplicationContainer = connect(
+export const ApplicationList = connect(
   state => ({ applications: state.applications.data }),
   actions,
-)(ApplicationList);
+)(ApplicationListWithStore);
