@@ -35,6 +35,10 @@ Launch the development server:
 ```
 yarn dev
 ```
+The source folder is `/src`.
+Files with global code and functions should directly be in `/src`. The associated test folder is `/src/__tests__`.
+Components folders are in the form: `/src/NameOfComponent`. They are composed of an `index.jsx` and `style.module.scss` files, and a `__tests__` folder.
+
 
 ## Build
 
@@ -42,3 +46,11 @@ Build the module in `/dist`:
 ```
 yarn build
 ```
+
+## Test
+
+Tests are made with [Jest](https://jestjs.io/). The following command launches all tests:
+```
+yarn test
+```
+> Jest CLI arguments can be passed directly to the above command, like so: `yarn test -u` (updates snapshots).
