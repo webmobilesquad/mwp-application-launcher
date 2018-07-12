@@ -3,6 +3,6 @@
 exports[`<ApplicationContainer /> <ApplicationContainer /> matches snapshot 1`] = `
 preact-render-spy (1 nodes)
 -------
-<i></i>
+<undefined></undefined>
 
 `;
