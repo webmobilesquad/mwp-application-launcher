@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Placeholder /> <Placeholder /> matches snapshot 1`] = `
+preact-render-spy (1 nodes)
+-------
+<li class="Placeholder">
+  <div class="Placeholder_Image"></div>
+</li>
+
+`;
