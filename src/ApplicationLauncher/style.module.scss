@@ -1,7 +1,8 @@
 $sidebar-width: 42px;
-$icon-size: 26px;
-$horizontal-padding: ($sidebar-width - $icon-size) / 2;
-$vertical-padding: 6px;
+$content-size: 28px;
+$border-size: 1px;
+$horizontal-padding: ($sidebar-width - $content-size) / 2;
+$vertical-padding: $horizontal-padding;
 
 $background-color: hsla(240, 8%, 19%, 1);
 $border-color: hsla(240, 6%, 26%, .8);
@@ -9,10 +10,10 @@ $emphasis-color: hsla(0, 0%, 70%, .8);
 
 .ApplicationLauncher {
   background-color: $background-color;
-  border-right: solid 1px $border-color;
+  border-right: solid $border-size $border-color;
   box-shadow: 3px 0 14px 2px rgba(0,0,0,.12);
   height: 100%;
-  width: $sidebar-width;
+  width: $sidebar-width + $border-size;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -22,10 +23,8 @@ $emphasis-color: hsla(0, 0%, 70%, .8);
 .Application {
   position: relative;
   padding: $vertical-padding $horizontal-padding;
-
-  img {
-    width: $icon-size;
-  }
+  width: 100%;
+  height: $sidebar-width;
 
   &:before {
     position: absolute;

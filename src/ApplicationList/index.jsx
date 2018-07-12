@@ -2,8 +2,8 @@ import { Component } from 'preact';
 import { connect } from 'unistore/preact';
 import cx from 'classnames';
 import { Application } from '../Application';
+import { Placeholder } from '../Application/Placeholder';
 import { actions } from '../actions';
-
 import style from './style.module.scss';
 
 class ApplicationListWithStore extends Component {
@@ -13,7 +13,6 @@ class ApplicationListWithStore extends Component {
 
   componentDidMount() {
     const { getApplications } = this.props;
-    // setTimeout(getApplications, 2000);
     getApplications();
   }
 
@@ -28,18 +27,20 @@ class ApplicationListWithStore extends Component {
     },
     { url },
   ) {
+    const items = applications
+      ? applications.map(application => (
+        <Application
+          application={application}
+          className={applicationClassName}
+          activeClassName={applicationActiveClassName}
+          onClick={this.handleUrlChange(application)}
+          url={url}
+        />
+      ))
+      : Array.from(Array(6)).map(() => <Placeholder className={applicationClassName} />);
     return (
       <ul className={cx(style.ApplicationList, className)} {...props}>
-        {applications
-          && applications.map(application => (
-            <Application
-              application={application}
-              className={applicationClassName}
-              activeClassName={applicationActiveClassName}
-              onClick={this.handleUrlChange(application)}
-              url={url}
-            />
-          ))}
+        {items}
       </ul>
     );
   }
