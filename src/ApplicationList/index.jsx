@@ -37,7 +37,7 @@ class ApplicationListWithStore extends Component {
           url={url}
         />
       ))
-      : Array.from(Array(6)).map(() => <Placeholder className={applicationClassName} />);
+      : Array.from(Array(4)).map(() => <Placeholder className={applicationClassName} />);
     return (
       <ul className={cx(style.ApplicationList, className)} {...props}>
         {items}

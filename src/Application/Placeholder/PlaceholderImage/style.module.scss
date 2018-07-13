@@ -1,0 +1,17 @@
+.PlaceholderImage {
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, .7);
+  animation: loading-pulse linear 1.5s infinite;
+}
+
+@keyframes loading-pulse {
+	0% {
+		opacity: .3;
+	}
+	50% {
+		opacity: .2;
+	}
+	100% {
+		opacity: .3;
+	}
+}
