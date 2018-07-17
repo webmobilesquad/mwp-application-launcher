@@ -5,33 +5,33 @@ export async function fetchApplications(url) {
   return Promise.resolve([
     {
       name: 'Home',
-      url: 'https://mywebportal.michelin-solutions.com/home',
-      icon: 'https://firebasestorage.googleapis.com/v0/b/newagent-24433.appspot.com/o/home_icon.png?alt=media&token=996d566b-2ab9-4349-afa5-9ac31a2994e3',
+      url: 'http://localhot:8082/home',
+      icon: 'https://firebasestorage.googleapis.com/v0/b/effidrive-967c0.appspot.com/o/application-launcher%2F0bdccdb6e6922c299d6e75f76e5aedd3.png?alt=media&token=76613b65-08ff-4375-9700-5a8a33eaaf9d',
     },
     {
       name: 'Administration',
-      url: 'https://mywebportal.michelin-solutions.com/admin',
-      icon: 'https://firebasestorage.googleapis.com/v0/b/newagent-24433.appspot.com/o/administration_icon.png?alt=media&token=f05d9acd-eccd-4a88-b015-db3cb9a9f382',
+      url: 'http://localhot:8082/admin',
+      icon: 'https://firebasestorage.googleapis.com/v0/b/effidrive-967c0.appspot.com/o/application-launcher%2Fd28c81414c3b03c4aab0d700e116ea78.png?alt=media&token=a9a65e13-aaed-4393-aba2-f8573f700466',
     },
     {
       name: 'MyInspection',
-      url: 'https://mywebportal.michelin-solutions.com/my-inspection',
-      icon: 'https://mywebportal.michelin-solutions.com/msn-applications/595847694218e668013f7dc4339790f2.png',
+      url: 'http://localhost:8082/my-inspection',
+      icon: 'https://firebasestorage.googleapis.com/v0/b/effidrive-967c0.appspot.com/o/application-launcher%2F61f8514e339ede3de5229a1a08883a9c.png?alt=media&token=7979ad18-be58-4952-b4dd-5b79c088ab83',
     },
     {
       name: 'MyTraining',
-      url: 'https://mywebportal.michelin-solutions.com/my-training',
-      icon: 'https://mywebportal.michelin-solutions.com/msn-applications/ae001618ead2779cbb3f7e5c44b6ec0f.png',
+      url: 'http://localhost:8082/my-training',
+      icon: 'https://firebasestorage.googleapis.com/v0/b/effidrive-967c0.appspot.com/o/application-launcher%2F358f5f65a1b62ac1d6745186d76a2cdb.png?alt=media&token=43d27b04-eb65-45bf-bd32-3be4eb3ad230',
     },
     {
       name: 'MyBestRoute',
-      url: 'https://mywebportal.michelin-solutions.com/my-best-route',
-      icon: 'https://mywebportal.michelin-solutions.com/msn-applications/05046645ac2e122e4c4508e9f1490836.png',
+      url: 'http://localhost:8082/my-best-route',
+      icon: 'https://firebasestorage.googleapis.com/v0/b/effidrive-967c0.appspot.com/o/application-launcher%2Fcb82eb178b8707b9257035c855175e7c.png?alt=media&token=1de81cea-111f-4993-9888-21ed5399030b',
     },
     {
       name: 'MyRewards',
-      url: 'https://mywebportal.michelin-solutions.com/my-rewards',
-      icon: 'https://mywebportal.michelin-solutions.com/msn-applications/070f89ea3a305fcf1dc3f8c348669a9a.png',
+      url: 'http://localhost:8082/my-rewards',
+      icon: 'https://firebasestorage.googleapis.com/v0/b/effidrive-967c0.appspot.com/o/application-launcher%2F5685653e1a9e7bc6dd42d67afc138e56.png?alt=media&token=1e00dd50-c1d5-4bb2-8bd1-c6f92bd330de',
     },
   ]);
 }
