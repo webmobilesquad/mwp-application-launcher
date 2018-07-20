@@ -1,10 +1,7 @@
 import { fetchApplications } from './fetchApplications';
 
 export const actions = store => ({
-  // TODO use async/await syntax if possible (see below)
-  // Setting "async getApplications" with "await fetchApplications",
-  // it seems that we cannot interact with the store
-  async getApplications({ applications }) {
+  getApplications({ applications, hasPermission }) {
     // Do nothing if url is not defined or applications are already being loaded
     if (!applications.url || applications.loading) { return; }
     // Set the loading to true
@@ -15,10 +12,15 @@ export const actions = store => ({
     });
     // Async fetch applications
     fetchApplications(applications.url).then((applicationsData) => {
-      // Once done, update the state
+      // Filter out not allowed applications
+      const allowedApplications = applicationsData.filter(
+        application => application.permission === undefined
+          || hasPermission(application.permission),
+      );
+      // Update the state
       store.setState({
         applications: {
-          data: applicationsData,
+          data: allowedApplications,
           loading: false,
         },
       });

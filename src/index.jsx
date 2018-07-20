@@ -19,11 +19,12 @@ const renderLauncherButton = ({ container, ...props }) => render(
   container,
 );
 
-export function initLauncher({ url }) {
+export function initLauncher({ url, hasPermission }) {
   store.setState({
     applications: {
       url,
     },
+    hasPermission,
   });
   return {
     renderLauncher,
