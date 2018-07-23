@@ -19,11 +19,18 @@ const renderLauncherButton = ({ container, ...props }) => render(
   container,
 );
 
-export function initLauncher({ url }) {
+export function init({ url, hasPermission }) {
+  if (url === undefined) {
+    throw new Error('MissingParameter: url was not provided');
+  }
+  if (hasPermission === undefined) {
+    throw new Error('MissingParameter: hasPermission() was not provided');
+  }
   store.setState({
     applications: {
       url,
     },
+    hasPermission,
   });
   return {
     renderLauncher,
