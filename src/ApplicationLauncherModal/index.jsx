@@ -1,10 +1,12 @@
 import cx from 'classnames';
+import { connect } from 'unistore/preact';
 import style from './style.module.scss';
 import { ApplicationList } from '../ApplicationList';
 
-export function ApplicationLauncherModal({ visible, ...props }) {
+function ApplicationLauncherModalWithStore({ visible, light, ...props }) {
   const classes = {
     [style.ApplicationLauncherModal__Visible]: visible,
+    [style.ApplicationLauncherModal__Light]: light,
   };
   return (
     <aside className={cx(style.ApplicationLauncherModal, classes)} {...props}>
@@ -16,3 +18,7 @@ export function ApplicationLauncherModal({ visible, ...props }) {
     </aside>
   );
 }
+
+export const ApplicationLauncherModal = connect(
+  state => ({ light: state.light }),
+)(ApplicationLauncherModalWithStore);

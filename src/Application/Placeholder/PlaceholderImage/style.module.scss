@@ -2,6 +2,10 @@
   border-radius: 3px;
   background-color: rgba(255, 255, 255, .7);
   animation: loading-pulse linear 1.5s infinite;
+
+  &__Light {
+    background-color: rgba(0, 0, 0, .35);
+  }
 }
 
 @keyframes loading-pulse {

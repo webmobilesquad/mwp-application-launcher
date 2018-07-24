@@ -19,7 +19,7 @@ const renderLauncherButton = ({ container, ...props }) => render(
   container,
 );
 
-export function init({ url, hasPermission }) {
+export function init({ url, hasPermission, light }) {
   if (url === undefined) {
     throw new Error('MissingParameter: url was not provided');
   }
@@ -32,6 +32,9 @@ export function init({ url, hasPermission }) {
     },
     hasPermission,
   });
+  if (light !== undefined) {
+    store.setState({ light });
+  }
   return {
     renderLauncher,
     renderLauncherButton,

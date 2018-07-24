@@ -8,6 +8,10 @@ $background-color: hsla(240, 8%, 19%, 1);
 $border-color: hsla(240, 6%, 26%, .8);
 $emphasis-color: hsla(0, 0%, 70%, .8);
 
+$background-color-light: #fff;
+$border-color-light: #fff;
+$emphasis-color-light: hsla(0, 0%, 50%, 0.8);
+
 .ApplicationLauncher {
   background-color: $background-color;
   border-right: solid $border-size $border-color;
@@ -18,6 +22,15 @@ $emphasis-color: hsla(0, 0%, 70%, .8);
   flex-flow: column;
   align-items: center;
   padding-top: $vertical-padding;
+
+  &__Light {
+    background-color: $background-color-light;
+    border-right: solid $border-size $border-color-light;
+
+    & .Application__Active:before {
+      background-color: $emphasis-color-light;
+    }
+  }
 }
 
 .Application {
