@@ -3,13 +3,6 @@
 exports[`<ApplicationLauncherModal /> <ApplicationLauncherModal /> matches snapshot 1`] = `
 preact-render-spy (1 nodes)
 -------
-<aside class="ApplicationLauncherModal">
-  <i
-    class="ApplicationLauncherModal_Content"
-    applicationClassName="Application"
-    applicationActiveClassName="Application__Active"
-  >
-  </i>
-</aside>
+<i></i>
 
 `;
