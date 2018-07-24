@@ -12,6 +12,7 @@ preact-render-spy (1 nodes)
     <img
       src="icon.png"
       alt="Test application"
+      onLoad={[Function onLoad]}
      />
   </a>
 </li>
