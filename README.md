@@ -9,15 +9,21 @@ Add the module to your dependencies:
 > yarn add mwp-application-launcher
 ```
 
-Import it in your code and initiate the module:
+Import it in your code and initialize the module:
 ```javascript
-import { initLauncher } from 'mwp-application-launcher';
+import { init } from 'mwp-application-launcher';
 
-const launcher = initLauncher({ url: 'http://path/to/your/api/endpoint' });
+const launcher = init(
+  { 
+    url: 'https://path/to/your/api/endpoint',
+    hasPermission: (permission) => { ... },
+  }
+);
 ```
 | Option | Type | Description |
 | --- | --- | --- |
-| url | string | Indicate from which url to fetch the items from. |
+| url | string | Indicate from which url the items should be fetched. |
+| hasPermission | function(permission: string) | Tells whether the logged in user has the given permission. |
 
 This init function returns 2 functions:
 * `renderLauncher({ container, ...props })` to display the items in a vertical full-height bar,
