@@ -61,6 +61,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "preact": "^8.2.9",
+    "unfetch": "^3.1.0",
     "unistore": "^3.0.6"
   }
 }

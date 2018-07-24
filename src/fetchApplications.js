@@ -1,3 +1,5 @@
+import fetch from 'unfetch';
+
 function fallback() {
   return [];
 }
