@@ -14,16 +14,18 @@ Import it in your code and initialize the module:
 import { init } from 'mwp-application-launcher';
 
 const launcher = init(
-  { 
+  {
     url: 'https://path/to/your/api/endpoint',
     hasPermission: (permission) => { ... },
+    light: false,
   }
 );
 ```
-| Option | Type | Description |
+| Option | Type | Default | Description |
 | --- | --- | --- |
-| url | string | Indicate from which url the items should be fetched. |
-| hasPermission | function(permission: string) | Tells whether the logged in user has the given permission. |
+| url | string | | Indicate from which url the items should be fetched. |
+| hasPermission | function(permission: string) | | Tells whether the logged in user has the given permission. |
+| light | boolean | false | Whether to use the light theme instead of the dark one. |
 
 This init function returns 2 functions:
 * `renderLauncher({ container, ...props })` to display the items in a vertical full-height bar,

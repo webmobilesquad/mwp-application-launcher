@@ -8,6 +8,10 @@ $background-color: hsla(240, 8%, 19%, 1);
 $border-color: hsla(240, 6%, 26%, .8);
 $emphasis-color: hsla(0, 0%, 70%, .8);
 
+$background-color-light: #fff;
+$border-color-light: #fff;
+$emphasis-color-light: hsla(0, 0%, 60%, 0.8);
+
 .ApplicationLauncherModal {
   background: $background-color;
   border: solid $border-size $border-color;
@@ -36,6 +40,15 @@ $emphasis-color: hsla(0, 0%, 70%, .8);
     & .Application {
       opacity: 1;
       transform: none;
+    }
+  }
+
+  &__Light {
+    background: $background-color-light;
+    border: solid $border-size $border-color-light;
+
+    & .Application__Active {
+      background: $emphasis-color-light;
     }
   }
 }

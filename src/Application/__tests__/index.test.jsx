@@ -1,5 +1,7 @@
 import render from 'preact-render-spy';
+import { Provider } from 'unistore/preact';
 import { Application } from '../index';
+import { store } from '../../store';
 
 describe('<Application />', () => {
   test('<Application /> matches snapshot', () => {
@@ -9,6 +11,12 @@ describe('<Application />', () => {
       icon: 'icon.png',
     };
     const currentUrl = '/current/url';
-    expect(render(<Application application={application} url={currentUrl} />)).toMatchSnapshot();
+    expect(
+      render(
+        <Provider store={store}>
+          <Application application={application} url={currentUrl} />
+        </Provider>,
+      ),
+    ).toMatchSnapshot();
   });
 });
