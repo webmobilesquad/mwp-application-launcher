@@ -22,7 +22,7 @@ const launcher = init(
 );
 ```
 | Option | Type | Default | Description |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | url | string | | Indicate from which url the items should be fetched. |
 | hasPermission | function(permission: string) | | Tells whether the logged in user has the given permission. |
 | light | boolean | false | Whether to use the light theme instead of the dark one. |
