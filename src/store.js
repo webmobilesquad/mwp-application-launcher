@@ -6,6 +6,5 @@ export const store = createStore({
     loading: false,
     url: null,
   },
-  light: false,
   currentUrl: null,
 });

@@ -13,6 +13,7 @@ export function ApplicationLauncherModal({ visible, light, ...props }) {
         className={style.ApplicationLauncherModal_Content}
         applicationClassName={style.Application}
         applicationActiveClassName={style.Application__Active}
+        light={light}
       />
     </aside>
   );

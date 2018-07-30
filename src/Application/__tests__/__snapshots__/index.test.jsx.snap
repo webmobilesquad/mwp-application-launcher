@@ -8,7 +8,7 @@ preact-render-spy (1 nodes)
     href="test/url"
     title="Test application"
   >
-    <i class="PlaceholderImage"></i>
+    <div class="PlaceholderImage PlaceholderImage"></div>
     <img
       src="icon.png"
       alt="Test application"

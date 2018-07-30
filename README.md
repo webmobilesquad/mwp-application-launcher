@@ -17,7 +17,6 @@ const launcher = init(
   {
     url: 'https://path/to/your/api/endpoint',
     hasPermission: (permission) => { ... },
-    light: false,
   }
 );
 ```

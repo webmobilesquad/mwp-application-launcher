@@ -18,6 +18,7 @@ class ApplicationListWithStore extends Component {
     applicationClassName,
     applicationActiveClassName,
     currentUrl,
+    light,
     ...props
   }) {
     let items;
@@ -28,10 +29,11 @@ class ApplicationListWithStore extends Component {
           className={applicationClassName}
           activeClassName={applicationActiveClassName}
           url={currentUrl}
+          light={light}
         />
       ));
     } else {
-      const placeholder = <Placeholder className={applicationClassName} />;
+      const placeholder = <Placeholder className={applicationClassName} light={light} />;
       items = Array.from(Array(4)).map(() => placeholder);
     }
     return (

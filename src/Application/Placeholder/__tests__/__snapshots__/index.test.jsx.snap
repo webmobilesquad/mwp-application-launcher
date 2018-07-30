@@ -4,7 +4,7 @@ exports[`<Placeholder /> <Placeholder /> matches snapshot 1`] = `
 preact-render-spy (1 nodes)
 -------
 <li class="Placeholder">
-  <i class="PlaceholderImage"></i>
+  <div class="PlaceholderImage PlaceholderImage"></div>
 </li>
 
 `;

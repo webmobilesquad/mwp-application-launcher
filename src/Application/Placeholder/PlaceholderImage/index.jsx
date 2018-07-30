@@ -1,8 +1,7 @@
 import cx from 'classnames';
-import { connect } from 'unistore/preact';
 import style from './style.module.scss';
 
-function PlaceholderImageWithStore({ className, light }) {
+export function PlaceholderImage({ className, light }) {
   const classes = {
     [style.PlaceholderImage__Light]: light,
   };
@@ -10,7 +9,3 @@ function PlaceholderImageWithStore({ className, light }) {
     <div className={cx(style.PlaceholderImage, className, classes)} />
   );
 }
-
-export const PlaceholderImage = connect(
-  state => ({ light: state.light }),
-)(PlaceholderImageWithStore);

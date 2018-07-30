@@ -11,6 +11,7 @@ export function ApplicationLauncher({ light, ...props }) {
       className={cx(style.ApplicationLauncher, classes)}
       applicationClassName={style.Application}
       applicationActiveClassName={style.Application__Active}
+      light={light}
       {...props}
     />
   );

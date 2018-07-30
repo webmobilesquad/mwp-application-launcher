@@ -17,7 +17,7 @@ export class Application extends Component {
 
   render(
     {
-      application, className, activeClassName, url: currentUrl, onClick,
+      application, className, activeClassName, url: currentUrl, onClick, light,
     },
     {
       loaded,
@@ -31,7 +31,7 @@ export class Application extends Component {
     return (
       <li className={cx(style.Application, className, classes)}>
         <a href={url} title={name} onClick={onClick}>
-          <PlaceholderImage className={style.PlaceholderImage} />
+          <PlaceholderImage className={style.PlaceholderImage} light={light} />
           <img src={icon} alt={name} onLoad={() => this.imageOnLoad()} />
         </a>
       </li>
