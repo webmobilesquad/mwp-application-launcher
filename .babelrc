@@ -15,7 +15,6 @@
         "async-to-promises",
         "transform-class-properties",
         "transform-object-rest-spread",
-        "transform-react-constant-elements",
         ["transform-react-jsx", {
           "pragma": "h"
         }],
@@ -39,7 +38,6 @@
         "async-to-promises",
         "transform-class-properties",
         "transform-object-rest-spread",
-        "transform-react-constant-elements",
         ["transform-react-jsx", {
           "pragma": "h"
         }],
