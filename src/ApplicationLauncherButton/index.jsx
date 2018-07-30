@@ -33,7 +33,7 @@ export class ApplicationLauncherButton extends Component {
     }
   };
 
-  render(props, { modalVisible }) {
+  render({ light, ...props }, { modalVisible }) {
     return (
       <div className={style.ApplicationLauncherButtonWrapper} {...props}>
         <button
@@ -54,7 +54,7 @@ export class ApplicationLauncherButton extends Component {
             <path d="M0 0h24v24H0z" fill="none" />
           </svg>
         </button>
-        <ApplicationLauncherModal visible={modalVisible} />
+        <ApplicationLauncherModal visible={modalVisible} light={light} />
       </div>
     );
   }

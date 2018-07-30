@@ -1,9 +1,8 @@
-import { connect } from 'unistore/preact';
 import cx from 'classnames';
 import { ApplicationList } from '../ApplicationList';
 import style from './style.module.scss';
 
-function ApplicationLauncherWithStore({ light, ...props }) {
+export function ApplicationLauncher({ light, ...props }) {
   const classes = {
     [style.ApplicationLauncher__Light]: light,
   };
@@ -16,7 +15,3 @@ function ApplicationLauncherWithStore({ light, ...props }) {
     />
   );
 }
-
-export const ApplicationLauncher = connect(
-  state => ({ light: state.light }),
-)(ApplicationLauncherWithStore);

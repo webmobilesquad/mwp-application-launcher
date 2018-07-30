@@ -24,7 +24,14 @@ preact-render-spy (1 nodes)
       </path>
     </svg>
   </button>
-  <i visible={false}></i>
+  <aside class="ApplicationLauncherModal">
+    <i
+      class="ApplicationLauncherModal_Content"
+      applicationClassName="Application"
+      applicationActiveClassName="Application__Active"
+    >
+    </i>
+  </aside>
 </div>
 
 `;

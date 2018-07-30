@@ -25,16 +25,16 @@ const launcher = init(
 | --- | --- | --- | --- |
 | url | string | | Indicate from which url the items should be fetched. |
 | hasPermission | function(permission: string) | | Tells whether the logged in user has the given permission. |
-| light | boolean | false | Whether to use the light theme instead of the dark one. |
 
 This init function returns 2 functions:
-* `renderLauncher({ container, ...props })` to display the items in a vertical full-height bar,
-* `renderLauncherButton({ container, ...props})` to display a control button which opens a modal containing the items.
+* `renderLauncher({ container, light, ...props })` to display the items in a vertical full-height bar,
+* `renderLauncherButton({ container, light, ...props})` to display a control button which opens a modal containing the items.
 
-| Option | Type | Description |
-| --- | --- | --- |
-| container | string | A selector matching a HTML element to which the launcher will be attached. |
-| ...props | any number of options of any type | These options will be passed down to the launcher parent element. |
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| container | string | null | A selector matching a HTML element to which the launcher will be attached. |
+| light | boolean | false | Whether to use the light theme instead of the dark one. |
+| ...props | any number of options of any type | | These options will be passed down to the launcher parent element. |
 
 
 ## Development
