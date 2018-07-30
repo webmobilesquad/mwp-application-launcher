@@ -7,4 +7,5 @@ export const store = createStore({
     url: null,
   },
   light: false,
+  currentUrl: null,
 });

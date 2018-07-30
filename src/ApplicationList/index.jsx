@@ -7,37 +7,33 @@ import { actions } from '../actions';
 import style from './style.module.scss';
 
 class ApplicationListWithStore extends Component {
-  state = {
-    url: window.location.href,
-  };
-
   componentDidMount() {
     const { getApplications } = this.props;
     getApplications();
   }
 
-  handleUrlChange = application => () => {
-    const { url: destinationUrl } = application;
-    this.setState({ url: destinationUrl });
-  };
-
-  render(
-    {
-      applications, className, applicationClassName, applicationActiveClassName, ...props
-    },
-    { url },
-  ) {
-    const items = applications
-      ? applications.map(application => (
+  render({
+    applications,
+    className,
+    applicationClassName,
+    applicationActiveClassName,
+    currentUrl,
+    ...props
+  }) {
+    let items;
+    if (applications) {
+      items = applications.map(application => (
         <Application
           application={application}
           className={applicationClassName}
           activeClassName={applicationActiveClassName}
-          onClick={this.handleUrlChange(application)}
-          url={url}
+          url={currentUrl}
         />
-      ))
-      : Array.from(Array(4)).map(() => <Placeholder className={applicationClassName} />);
+      ));
+    } else {
+      const placeholder = <Placeholder className={applicationClassName} />;
+      items = Array.from(Array(4)).map(() => placeholder);
+    }
     return (
       <ul className={cx(style.ApplicationList, className)} {...props}>
         {items}
@@ -47,6 +43,6 @@ class ApplicationListWithStore extends Component {
 }
 
 export const ApplicationList = connect(
-  state => ({ applications: state.applications.data }),
+  state => ({ applications: state.applications.data, currentUrl: state.currentUrl }),
   actions,
 )(ApplicationListWithStore);

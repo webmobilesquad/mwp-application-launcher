@@ -3,6 +3,7 @@ import { Provider } from 'unistore/preact';
 import { ApplicationLauncher } from './ApplicationLauncher';
 import { ApplicationLauncherButton } from './ApplicationLauncherButton';
 import { store } from './store';
+import { watchUrl } from './watchUrl';
 
 const renderLauncher = ({ container, ...props }) => render(
   <Provider store={store}>
@@ -34,6 +35,7 @@ export function init({ url, hasPermission, light }) {
   if (light !== undefined) {
     store.setState({ light });
   }
+  watchUrl();
   return {
     renderLauncher,
     renderLauncherButton,
