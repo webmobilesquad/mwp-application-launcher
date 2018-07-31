@@ -23,7 +23,11 @@ const launcher = init(
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
 | url | string | | Indicate from which url the items should be fetched. |
-| hasPermission | function(permission: string) | | Tells whether the logged in user has the given permission. |
+| hasPermission | function(permission: string): boolean\|Promise | | Tells whether the logged in user has the given permission. |
+
+> The `hasPermission` function can either
+> * be synchronous and return `true` for allowance, `false` otherwise
+> * be asynchronous and return a promise that will be `resolved` for allowance, `rejected` otherwise
 
 This init function returns 2 functions:
 * `renderLauncher({ container, light, ...props })` to display the items in a vertical full-height bar,

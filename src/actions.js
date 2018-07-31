@@ -12,18 +12,25 @@ export const actions = store => ({
     });
     // Async fetch applications
     fetchApplications(applications.url).then((applicationsData) => {
-      // Filter out not allowed applications
-      const allowedApplications = applicationsData.filter(
-        application => application.permission === undefined
-          || hasPermission(application.permission),
-      );
-      // Update the state
-      store.setState({
-        applications: {
-          data: allowedApplications,
-          loading: false,
-        },
-      });
+      // Check permission for each application
+      Promise.all(
+        applicationsData.map((element) => {
+          if (element.permission === undefined) return Promise.resolve(true);
+          return Promise.resolve(hasPermission(element.permission))
+            .catch(() => Promise.resolve(false));
+        }),
+      )
+        // Filter out non allowed applications
+        .then(elements => applicationsData.filter(() => elements.shift()))
+        // Update the state with the allowed applications
+        .then(elements => store.setState(
+          {
+            applications: {
+              data: elements,
+              loading: false,
+            },
+          },
+        ));
     });
   },
 });
