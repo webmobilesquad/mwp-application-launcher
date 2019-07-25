@@ -60,6 +60,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "history-events": "^1.0.4",
+    "lodash.mergewith": "4.6.2",
     "preact": "^8.2.9",
     "unfetch": "^3.1.0",
     "unistore": "^3.0.6"
