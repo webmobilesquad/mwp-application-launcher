@@ -18,3 +18,21 @@ preact-render-spy (1 nodes)
 </li>
 
 `;
+
+exports[`<Application /> <Application /> targets are allowed 1`] = `
+preact-render-spy (1 nodes)
+-------
+<li class="Application">
+  <a
+    target="_blank"
+    title="Test application"
+  >
+    <div class="PlaceholderImage PlaceholderImage"></div>
+    <img
+      alt="Test application"
+      onLoad={[Function onLoad]}
+     />
+  </a>
+</li>
+
+`;

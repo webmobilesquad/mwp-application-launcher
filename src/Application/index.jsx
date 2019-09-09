@@ -23,14 +23,19 @@ export class Application extends Component {
       loaded,
     },
   ) {
-    const { name, url, icon } = application;
+    const {
+      name,
+      url,
+      icon,
+      target,
+    } = application;
     const classes = {
       [activeClassName]: isUrlActiveForApplication(currentUrl, application),
       [style.Application__Loaded]: loaded,
     };
     return (
       <li className={cx(style.Application, className, classes)}>
-        <a href={url} title={name} onClick={onClick}>
+        <a href={url} target={target} title={name} onClick={onClick}>
           <PlaceholderImage className={style.PlaceholderImage} light={light} />
           <img src={icon} alt={name} onLoad={() => this.imageOnLoad()} />
         </a>
